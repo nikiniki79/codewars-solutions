@@ -1,8 +1,10 @@
-public class AbbreviateTwoWords {
-  public static String abbrevName(String name) {
-    String[] arr = name.split(" ");
-    String str = name.substring(0, 1).toUpperCase() + ".";
-    str += arr[1].substring(0, 1).toUpperCase();
-    return str;
-  }
+public class Kata {
+  public static int[] digitize(long n) {
+    StringBuilder str = new StringBuilder(String.valueOf(n));
+    String newStr[] = str.reverse().toString().split("");
+    int arr[] = new int[newStr.length];
+    for (int i = 0; i < newStr.length; i++) {
+      arr[i] = Integer.parseInt(newStr[i]);
+    } return arr;
+  } 
 }
